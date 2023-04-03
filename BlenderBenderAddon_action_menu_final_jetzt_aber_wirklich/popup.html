@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blender Bender Hub</title>
+    <style>
+      body {
+        width: 480px;
+        height: 160px;
+        background-image: url('backgroundaddonclean.png');
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        
+        
+      }
+
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        font-size: 18px;
+        margin: 5px;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .button:hover {
+        transform: scale(1.1);
+      }
+
+      .button:focus {
+        outline: none;
+      }
+
+      .button:not(:hover) {
+        transform: scale(0.95);
+      }
+
+      .button:active {
+        background-color: #555;
+        border-color: #555;
+        color: white;
+        transform: scale(0.9);
+      }
+
+      #discord-button {
+        margin-right: 30px;
+      }
+
+      #text {
+        text-align: center;
+        font-size: 16px;
+        margin: 0 auto;
+        width: 240px;
+        line-height: 1.5;
+      }
+
+      .tooltip {
+        visibility: hidden;
+        width: 150px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .button:hover .tooltip {
+        visibility: visible;
+        opacity: 0.9;
+      }
+
+      .info {
+        text-align: center;
+        font-size: 14px; /* 16 */
+        width: 210px;
+        line-height: 1.5;
+        border: rgba(255,255,255,0.7) solid 1px;
+        border-radius: 15px;
+        padding: 15px 15px 15px 15px;
+        background-color: rgba(0,0,0,0.5);
+        margin-top: 10px;
+        min-width: 200px;
+        min-height: 100px;
+      }
+
+      .collum2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .logo{
+        height: 60px;
+        width: 60px;
+        background-image: url(logo.png);
+        background-size: cover;
+        margin: 0 40px 0 10px;
+      }
+      
+
+
+      /* logo action*/
+      #logo_action{
+        top: 45px;
+        right: 270px;
+
+        background-image: url(questionmark.svg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      #logo_action2{
+        top: 80px;
+        left: 230px;
+
+        background-image: url(gear.svg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      #logo_action3{
+        top: 115px;
+        right: 270px; /* 445px */
+      }
+
+      #actionclickbtns{
+        opacity: 0;
+        transition: 0.7s;
+      }
+
+      .action{
+        border-radius: 50%;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border: 1px solid white;
+        transition: 0.5s;
+      }
+
+      .action:hover{
+        transition: 0.5s;
+        transform: scale(1.2);
+      }
+
+      .logo_bottom{
+        height: 30px;
+        width: 180px;
+        background-image: url(textlogoblenderbender.png);
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        z-index: 1000;
+      }
+      .logo:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+        
+      }
+      .logo:not(:hover) {
+        transform: scale(1.0);
+        transition: 0.3s;
+        
+      }
+
+    </style>
+    <div class="logo_bottom"></div>
+  <body>
+    <div class="button-container">
+      <a href="https://twitter.com/3danimdc" target="_blank" class="button">
+        Twitter
+        <span class="tooltip">Official Blender Bender Twitter</span>
+      </a>
+      <a href="https://discord.com/invite/xsTPWU3fbn" target="_blank" class="button" id="discord-button">
+        Discord
+        <span class="tooltip">Open the Blender Bender Discord</span>
+      </a>
+      <a href="https://drive.google.com/drive/folders/1F9t5we7EpNa6iUwb_PqGXLt5FEWd_iXb?usp=share_link" target="_blank" class="button">
+        3d Files
+        <span class="tooltip">Open the Blender Bender drive</span>
+      </a>
+    </div>
+    <div class="collum2">  
+        <div class="logo" id="logo"></div>
+        <div id="actionclickbtns">
+          <div id="logo_action" class="action"></div>
+          <div id="logo_action2" class="action"></div>
+          <div id="logo_action3" class="action"></div>
+        </div>  
+    </div>
+    
+    
+
+      <div class="info">
+      Welcome to BlenderBender Hub, here are a few shortcut buttons to make your daily work a lot easier. Make sure to recommend this to your friends!
+    </div>
+    
+    
+    
+    <script src="popup.js"></script>
+  </body>
+</html>

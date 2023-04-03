@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Blender Bender Hub",
+  "version": "1.0",
+  "description": "Useful Hub for all Blender Bender fans and members!",
+  "icons": {
+    "128": "logo.png"
+  },
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
